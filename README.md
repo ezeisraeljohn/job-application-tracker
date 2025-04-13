@@ -30,7 +30,6 @@ Backend: [https://your-backend-url.onrender.com](soon)
 
 ```bash
 # Backend
-cd backend
 npm install
 npm run dev
 
