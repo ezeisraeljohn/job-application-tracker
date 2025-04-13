@@ -23,8 +23,8 @@ Track your job applications, get AI-powered resume feedback & job recommendation
 
 ## Live Demo
 
-Frontend: [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)  
-Backend: [https://your-backend-url.onrender.com](https://your-backend-url.onrender.com)
+Frontend: [https://your-vercel-url.vercel.app](soon)  
+Backend: [https://your-backend-url.onrender.com](soon)
 
 ## Installation
 
