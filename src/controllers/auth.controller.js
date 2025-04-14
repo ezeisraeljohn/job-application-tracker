@@ -8,7 +8,6 @@ module.exports = {
     try {
       const { email, password, name } = req.body;
       const existingUser = await User.findOne({ where: { email } });
-      console.log(existingUser);
       if (existingUser) return sendFailure(res, 400, "User already exists");
       const salt = generateSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
