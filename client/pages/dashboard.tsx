@@ -4,7 +4,6 @@ import api from "../services/api";
 import Navbar from "../components/Navbar";
 import {
   Job,
-  LoginResponse,
   JobResponse,
   FeedbackResponse,
   RecommendationResponse,
@@ -44,7 +43,7 @@ export default function Dashboard() {
     try {
       const res = await api.get<JobResponse>("/jobs");
       setJobs(res.data.data as Job[]);
-    } catch (error) {}
+    } catch {}
   };
   const fetchRecommendations = async () => {
     try {
@@ -52,7 +51,7 @@ export default function Dashboard() {
         "/jobs/recommendations"
       );
       setRecommendations(res.data.data);
-    } catch (error) {}
+    } catch {}
   };
 
   useEffect(() => {
@@ -88,7 +87,7 @@ export default function Dashboard() {
         notes: "",
       });
       fetchJobs();
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong. Please try again.");
     }
     setLoading(false);
@@ -114,7 +113,7 @@ export default function Dashboard() {
       });
       setFeedback(res.data.data);
       setResumeError("");
-    } catch (err) {
+    } catch {
       setResumeError("Something went wrong. Please try again.");
     }
   };
